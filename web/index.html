@@ -106,6 +106,7 @@
           event.preventDefault();
           $('#MainContent').fadeOut('slow', function()
           {
+            alert($(event.target).attr('href'));
             $('#MainContent').load($(event.target).attr('href'));
             $('#MainContent').fadeIn('slow');
           });
