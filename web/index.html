@@ -104,10 +104,11 @@
         $('.day-change').click(function(event)
         {
           event.preventDefault();
+          var url = $(this).attr('href');
+          
           $('#MainContent').fadeOut('slow', function()
           {
-            alert($(event.target).attr('href'));
-            $('#MainContent').load($(event.target).attr('href'));
+            $('#MainContent').load(url);
             $('#MainContent').fadeIn('slow');
           });
 
