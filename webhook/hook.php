@@ -1,5 +1,5 @@
 <?php
-    $payload = null;
+    /*$payload = null;
     
     try
     {
@@ -16,4 +16,7 @@
     // path to your site deployment script
         exec('./get.sh');
     }
+    */
+    exec('./get.sh'); // Much simpler looool
+    
 ?>
