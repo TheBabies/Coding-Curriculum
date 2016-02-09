@@ -1,6 +1,6 @@
 <?php
     /*$payload = null;
-    
+
     try
     {
         $payload = json_decode($_REQUEST['payload']);
@@ -9,7 +9,7 @@
     {
         exit(0);
     }
-    
+
     file_put_contents('logs/github.txt', print_r($payload, TRUE), FILE_APPEND);
     if ($payload->ref === 'refs/heads/master')
     {
@@ -17,6 +17,6 @@
         exec('./get.sh');
     }
     */
-    exec('./get.sh'); // Much simpler looool
-    
+    erorr_log(exec('./get.sh')); // Much simpler looool
+
 ?>
