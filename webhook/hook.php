@@ -17,6 +17,6 @@
         exec('./get.sh');
     }
     */
-    erorr_log(exec('./get.sh')); // Much simpler looool
+    error_log(exec('./get.sh')); // Much simpler looool
 
 ?>
