@@ -1,6 +1,20 @@
+@import url('fonts/old_london.css');
+
 body
 {
   padding-top: 60px;
+  background-image: url('../img/ye-olde-bg-1.jpg');
+}
+
+.navbar
+{
+  font-family: "Old London";
+  font-weight: 400;
+  font-size: 40px;
+}
+.navbar-brand
+{
+  font-size: 30px;
 }
 
 @media (max-width: 980px)

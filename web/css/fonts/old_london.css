@@ -1,0 +1,8 @@
+@font-face
+{
+  font-family: 'Old London';
+  font-style: normal;
+  font-weight: 400;
+  src: url('old_london/OldLondon.ttf') format('truetype'),
+      url('old_london/OldLondon.otf') format('opentype');
+}
