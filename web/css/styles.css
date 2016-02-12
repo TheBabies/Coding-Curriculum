@@ -4,6 +4,7 @@ body
 {
   padding-top: 60px;
   background-image: url('../img/ye-olde-bg-1.jpg');
+  background-attachment: fixed;
 }
 
 .navbar
