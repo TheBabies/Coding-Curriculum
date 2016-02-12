@@ -80,7 +80,7 @@
 
           $('#MainContent').fadeOut('slow', function()
           {
-            $('#MainContent').load(url + "?rand=" + new Date.getTime());
+            $('#MainContent').load(url + "?rand=" + Math.random());
             $('#MainContent').fadeIn('slow');
           });
 
