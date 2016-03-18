@@ -85,8 +85,11 @@
 
           $('#MainContent').fadeOut('slow', function()
           {
-            $('#MainContent').load(url + "?rand=" + Math.random());
-            $('#MainContent').fadeIn('slow');
+            $('#MainContent').load(url + "?rand=" + Math.random(), function(response, status, xhr)
+            {
+              $('#MainContent').fadeIn('slow');
+              Prism.highlightAll();       
+            });
           });
 
         });
