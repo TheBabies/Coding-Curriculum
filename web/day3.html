@@ -16,13 +16,27 @@
     </p>
     <p>
       In this example, we will be creating a scanner to take user input.
-      <div class="well">
+      <div class="well well-sm">
         <pre>
           <code class="language-java">
-            Scannner scanner = new Scanner(System.in);
+            Scannner myScanner = new Scanner(System.In);
           </code>
         </pre>
       </div>
+      This creates a new Scanner called myScanner, and creates it using System.In, which is the input on the command line. This will
+      make more sense a bit later.
+    </p>
+    <p>
+      So, how does this help us? Now that we have a Scanner we can pull some user input in. Enter the following code, and see what happens
+      when you run it.
+      <pre>
+        <code style="language-java">
+          Scanner myScanner = new Scanner(System.In);
+          System.out.println("Please enter your name:");
+          String name = myScanner.nextLine();
+          System.out.println("Nice to meet you, " + name + "!");
+        </code>
+      </pre>
     </p>
   </div>
 </div>
