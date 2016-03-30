@@ -4,7 +4,8 @@
       <p>
         Variables are great, but they have one major flaw: they can only store one value at a time.<br>
         But alas! No more! Today you will learn how to declare and use Lists and Arrays. This will allow
-        you to store lots of similar but related data together, making your code even more super-duper.
+        you to store lots of similar but related data together, making your code even more super-duper.<br>
+        We'll also throw some fun loops in too, just for good measure. Today will be a meaty one!
       </p>
   </div>
   <div class="well well-sm">
@@ -105,6 +106,51 @@
       setting it to zero. Then every time the code runs i will be increased by 1 until
       it is 10, at which point it'll stop.<br>
       Run the code in IntelliJ IDEA and see what your output is.
+    </p>
+  </div>
+
+  <div class="well well-sm">
+    <h2>Putting It All Together.....</h2>
+    <p>
+      So now you have two very useful tools: arrays and loops. Wouldn't it be great if they
+      went together somehow? Now is the time for that!
+    </p>
+    <p>
+      Consider this example:<br>
+      <pre>
+        <code class="language-java">
+          // Create a new Scanner object to get input from the user.
+          Scanner s = new Scanner(System.in);
+
+          // Create a new double array to store the five numbers the user will enter.
+          double[] numbers = new double[5];
+
+          // Print out the request to the user.
+          System.out.println("Please enter five numbers, pressing enter after each one:")
+
+          // Get five numbers from the user and store them in the numbers array.
+          for (int i = 0; i < 5; i++)
+          {
+            numbers[i] = s.nextDouble();
+          }
+
+          // Create a new double to store the average in.
+          double average;
+
+          // Add all the numbers to the average
+          for (int i = 0; i < 5; i++)
+          {
+            average = average + numbers[i];
+          }
+
+          // Divide the average variable by 5 to get the average of the five numbers
+          // entered.
+          average = average / 5;
+
+          // Write the average on the screen.
+          System.out.println("The average of those five numbers are: " + average);
+        </code>
+      </pre>
     </p>
   </div>
 </div>
