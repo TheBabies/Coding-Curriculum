@@ -7,4 +7,104 @@
         you to store lots of similar but related data together, making your code even more super-duper.
       </p>
   </div>
+  <div class="well well-sm">
+    <h2>Arrays</h2>
+    Previously, you saw how you could store things in variables so that they could be used later. Now we're going to
+    take this further and show how you can store multiple items in one variable under one name.<br>
+    Here's an example of one:<br>
+    <pre>
+      <code class="language-java">
+        // Declare a new Integer array of five items.
+        int[] myArray = new int[5];
+
+        // Set each of the five items in the array to some numbers I randomly came up with
+        // in my head.
+
+        myArray[0] = 10;
+        myArray[1] = 34;
+        myArray[2] = 89;
+        myArray[3] = 45;
+        myArray[4] = 27;
+      </code>
+    </pre><br>
+    <p>
+      <em>
+        Psst! Notice those double forward slashes? They're called comments. They let you write
+        human language in your code to explain to other programmers, your parents, yourself
+        the next day, etc. what your code does or why you did it. Comments are super helpful,
+        and never be afraid to use them when you do complicated things!
+      </em>
+    </p>
+    <p>
+      Here are some things to note about arrays:<br>
+      <ul>
+        <li>
+          Every item in the array must be of the same data type (remember day 3?)
+        </li>
+        <li>
+          An array is fixed in size. Notice the 5 in square brackets when we declared the array?<br>
+          This sets the size of the array. You cannot make an array bigger without creating a new array
+          with a larger size then copying your old data to your new array. Annoying, but it makes
+          arrays super efficient.
+        </li>
+        <li>
+          Arrays are <em>indexed</em>. This means that each item is access by using the name of the array
+          (like myArray) followed by the 'index' in square brackets.
+        </li>
+        <li>
+          Array indices start at zero. This means that an array of five items has items 0, 1, 2, 3 &amp; 4.
+          Yes it's weird, but welcome to Computing!
+        </li>
+      </ul>
+    </p>
+  </div>
+
+  <div class="well well-sm">
+    <h2>For Loops</h2>
+    <p>
+      Let's discuss something completely different! I know your explanation of arrays got cut a bit short there,
+      but it's with good reason...I promise!
+    </p>
+    <p>
+      Loops are awesome things. They let you tell the computer to do something more than once
+      without typing the code over and over. Better yet, you can let the computer figure out
+      with other code how many times something should happen, then it will do it. Here's an example...
+      <pre>
+        <code class="language-java">
+          for (int i = 0; i < 10; i++)
+          {
+            System.out.println("Hello computer! i is " + i);
+          }
+        </code>
+      </pre>
+    </p>
+    <p>
+      It looks really complicated but just needs breaking down.<br>
+      Firstly, every for loop has three important parts in brackets, each separated by
+      semicolons:
+      <ol>
+        <li>
+          The first part is the declaration of a counter variable. This is where
+          you tell Java what the counter will be. Without a counter Java will not
+          know how many times the loop will run.<br>
+          In this example, int i = 0 means "let's count with an integer number. The
+          first value will be zero."
+        </li>
+        <li>
+          The second section is the condition for carrying on.<br>
+          In this example, we used i < 10. This means "keep doing this code over
+          and over and over again so long as i is less than 10. As soon as i hits
+          10 Java will stop running the code within the curly braces after the for loop.
+        </li>
+        <li>
+          The third section is the code that will be run every time the loop cycles.<br>
+          In this example we are using i++. This is shorthand for "increase i by 1".
+        </li>
+      </ol>
+      The result of this is that the code will create an empty variable called i,
+      setting it to zero. Then every time the code runs i will be increased by 1 until
+      it is 10, at which point it'll stop.<br>
+      Run the code in IntelliJ IDEA and see what your output is.
+    </p>
+  </div>
 </div>
