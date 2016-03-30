@@ -18,7 +18,7 @@
       In this example, we will be creating a scanner to take user input.
       <pre>
         <code class="language-java">
-          Scannner myScanner = new Scanner(System.In);
+          Scanner myScanner = new Scanner(System.In);
         </code>
       </pre>
       This creates a new Scanner called myScanner, and creates it using System.In, which is the input on the command line. This will
@@ -31,22 +31,63 @@
         <code class="language-java">
           Scanner myScanner = new Scanner(System.In);
           System.out.println("Please enter your name:");
-          String name = myScanner.nextLine();
+          String name = myScanner.next();
           System.out.println("Nice to meet you, " + name + "!");
         </code>
       </pre>
     </p>
   </div>
-
+  <div class="well well-sm">
+    <h2>What if...?</h2>
+    <p>
+      At some points you want your programme to seperate the operations based on different conditions. suppose that you want to print out
+      the absolute value of a number. (if you have done the second part of the last day's excercises, you should be familiar with Math.abs function, if not,
+      don't worry we'll just show it now :) ) in order to do it, you have two different conditions to consider. If your number is greater than or equal to zero, then you're good!
+      but if not, you need to multiply your number by -1. The way of telling it to your computer is using the notations below.
+      <pre>
+        <code class="language-java">
+          Scanner myScanner = new Scanner(System.In);
+          int a = myScanner.nextInt();
+          if (a >= 0)
+          {
+            System.out.println(a);
+          }
+          else
+          {
+            System.out.println(a*-1);
+          }
+        </code>
+      </pre>
+      Also there are sometimes that you have more than two conditions, you can show it via the notations below:
+      <pre>
+        <code class="language-java">
+          if (//condition 1 goes here)
+          {
+            //statements for condition 1.
+          }
+          else if (//condition 2 goes here)
+          {
+            //statements for condition 2.
+          }
+          else
+          {
+            //statements for the rest of conditions
+          }
+        </code>
+      </pre>
+      You can see that you are allowed to have multiple conditions. you can also even not use the else block, and just have if blocks. (remember though at some special
+      point you will face problem with not using the else block, we will explain it tommorow...)
+    </p>
+  </div>
   <div class="well well-sm">
     <h2>Exercises for Today</h2>
     <h4>Warm Up!</h4>
     <p>
-      You should be able to get numbers from the input at this point!
+      You should be able to get numbers from the input, and know about data types and conditions at this point! try to do the questions below to deepen your knowledge on all the things you've learned by now!
       <ol>
         <li>Get 2 numbers from the input and show the smaller one.</li>
-        <li>Get a number from the input and calculate the sum of it’s digits.</li>
-        <li>Get a number from the input and print out their inverse.</li>
+        <!--TODO: Add this to day 5, need for loop <li>Get a number from the input and calculate the sum of it’s digits.</li>
+        <li>Get a number from the input and print out their inverse.</li> -->
         <li>Suppose the first day of the year is Saturday. Get a number as a day in year and show which day of week it is.</li>
       </ol>
     </p>
