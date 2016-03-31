@@ -19,15 +19,30 @@
           {
             if(a>=0)
             {
-              System.out.println(a);
+              return a;
             }
             else
             {
-              System.out.println(a*-1);
+              return a*-1;
             }
           }
         </code>
       </pre>
+      You can see that the keyword "int" is written before ur function name. That is the type of value your function will give as output, or in coding terminology it <em>returns</em>
+      If you return any other value than an integer in the function, you will face an error from your computer! also, after the function name (which here is absolute), you can see a paranthesis which has a declared variable inside.
+      this is where you say how many inputs you have, and from what type, and in your function with what name they are called(so that you can do any operation on them). after all these declaration, you will have a block of curly brackets, where you
+      actually write the statements of your function. and that is it!
+      The point here is that anytime in your code that you need, you can simply send any integer value to this function and get your result back. it is referred to as <em>calling</em> a function. for example, after declaring the absolute function,
+      you can use it like this:
+      <pre>
+        <code class="language-java">
+          System.out.println(absolute(3));
+          System.out.println(absolute(-5));
+          int a = absolute(-7);
+          System.out.println(a);
+        </code>
+      </pre>
+      this is the basics of how it works :) try it out in your own IDE and see how it works...
     </p>
   </div>
 </div>
