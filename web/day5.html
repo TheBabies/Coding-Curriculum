@@ -161,5 +161,87 @@
   <div class="well well-sm">
     <h2>Lists</h2>
     <em>LISTS ARE AMAZING</em>
+    <p>
+      Imagine if you had an array, but you could resize it to your heart's content?
+      Maybe you have no idea how many items your user will enter? In this situation a List
+      might be more useful to you than an array. They're a bit more complicated than arrays,
+      but they can do cool stuff like:
+      <ul>
+        <li>
+          Endless growing! Need another item item in the list? Just add it and let
+          the computer deal with the rest. Start with almost no memory usage and
+          let that change as time goes on and stuff gets added.
+        </li>
+        <li>
+          Casual deleting and reordering, so you can delete an item in the middle
+          of the list without having blank spaces like you would with an array. You
+          can also insert items in the middle of the list. It's all flexible!
+        </li>
+      </ul>
+    </p>
+    <p>
+      Now that you're super excited about lists, take a look at the following example...<br>
+      <pre>
+        <code class="language-java">
+          // Create a new ArrayList of integer numbers.
+          ArrayList<int> myList = new ArrayList<int>();
+
+          // Create a new random number generator. Randomness is cool! :)
+          Random rand = new Random();
+
+          // Ask the user for some parameters.
+          Scanner s = new Scanner(System.in);
+          System.out.print("What would you like the maximum random number to be? ");
+          int max = s.nextInt();
+          System.out.print("How many random numbers to add? ");
+          int count = s.nextInt();
+
+          // Now add all the numbers!
+
+          // Go from 0 to 1 less than the count, which is the same number of
+          // iterations as going from 1 to the count. This code just looks cleaner :)
+          for (int i = 0; i < count; i++)
+          {
+            // Add a random number between 1 and the max value the user entered.
+            int randomNumber = rand.nextInt(max) + 1;
+
+            // Add the number to the list.
+            myList.add(randomNumber);
+          }
+
+          System.out.println("The following numbers were generated: ");
+          // Loop over every item in the list. You can use size(ListNameHere) to get
+          // the number of items in a list. Cool, eh?
+          for (int i = 0; i < size(myList); i++)
+          {
+            System.out.println(myList.get(i));
+          }
+        </code>
+      </pre>
+    </p>
+    <p>
+      A lot happened in that code, I know! Some new things:
+      <ul>
+        <li>
+          We are using a new type you've never seen before called an <em>ArrayList</em>.<br>
+          It is called this because it's like an array, but is a list. So it's an ArrayList...
+        </li>
+        <li>
+          To declare an ArrayList, you use the angle brackets to tell Java what
+          data type you want the ArrayList to hold. This is because an ArrayList
+          can hold any type and as many items as you want, but they must all be of
+          the same type.
+        </li>
+        <li>
+          I threw some random number code in! You don't have to understand random
+          numbers just yet, but it's worth noting that you can get them :)
+        </li>
+        <li>
+          If you use the size() function you can find out how many items are in a
+          list. In this example size wasn't necessary because we have the max variable,
+          but it's worth having in case you don't know how large your list is.
+        </li>
+      </ul>
+    </p>
   </div>
 </div>
