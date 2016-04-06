@@ -4,19 +4,37 @@
 body
 {
   padding-top: 60px;
-  background-image: url('../img/ye-olde-bg-1.jpg');
+  background-image: url('../img/B.jpg');
   background-attachment: fixed;
+  font-family: "comic sans ms";
+}
+h1{
+  font-family: "comic sans ms";
+  color: "0cb7ea";
+}
+h2{
+  font-family: "comic sans ms";
+  color: "0cb7ea";
+}
+h3{
+  font-family: "comic sans ms";
+  color: "0cb7ea";
+}
+h4{
+  font-family: "comic sans ms";
+  color: "0cb7ea";
 }
 
 .navbar
 {
-  font-family: "Old London";
-  font-weight: 400;
-  font-size: 40px;
+  font-family: "comic sans ms";
+  font-weight: 300;
+  font-size: 36px;
 }
 .navbar-brand
 {
-  font-size: 30px;
+  color: "0ceae4";
+  font-size: 24px;
 }
 
 @media (max-width: 980px)
