@@ -74,7 +74,7 @@ public class Main {
         String playerTwoName;
         if (twoPlayer)
         {
-            System.out.println("Please enter the name of player two: ");
+            System.out.print("Please enter the name of player two: ");
             playerTwoName = scanner.nextLine();
         }
         else
@@ -92,7 +92,8 @@ public class Main {
 
         for(int i = 1; i <=numberOfRounds; i++)
         {
-            clearScreen();
+            if (twoPlayer)
+                clearScreen();
             System.out.println("Round " + i);
             System.out.println();
 
@@ -104,8 +105,8 @@ public class Main {
             do
             {
                 scanner.reset();
-                String temp2 = scanner.next();
-                playerOneSelection = temp2.charAt(0);
+                String playerOneSelectionString = scanner.next();
+                playerOneSelection = playerOneSelectionString.charAt(0);
             } while (playerOneSelection != 'R' && playerOneSelection != 'P' && playerOneSelection != 'S');
 
 
@@ -116,15 +117,16 @@ public class Main {
                 System.out.println(playerTwoName + ", please make your selection.");
                 do
                 {
-                    playerTwoSelection = scanner.nextLine().charAt(0);
+                    String playerTwoSelectionString = scanner.next();
+                    playerTwoSelection = playerTwoSelectionString.charAt(0);
                 } while (playerTwoSelection != 'R' && playerTwoSelection != 'P' && playerTwoSelection != 'S');
             }
             else
             {
                 playerTwoSelection = getRandomWeapon();
             }
-
-            clearScreen();
+            if (twoPlayer)
+                clearScreen();
             int result = whichPlayerWins(playerOneSelection, playerTwoSelection);
             System.out.println(playerOneName + " played " + getWeaponName(playerOneSelection));
             System.out.println(playerTwoName + " played " + getWeaponName(playerTwoSelection));
@@ -153,8 +155,8 @@ public class Main {
                 scanner.nextLine();
             }
         }
-
-        clearScreen();
+        if (twoPlayer)
+            clearScreen();
         System.out.println("Final results!");
         if (playerOneScore > playerTwoScore)
         {
@@ -181,8 +183,8 @@ public class Main {
         do
         {
             showMenu();
-            String temp = scanner.next();
-            input = temp.charAt(0);
+            String inputString = scanner.next();
+            input = inputString.charAt(0);
             //System.out.println(input);
 
 
