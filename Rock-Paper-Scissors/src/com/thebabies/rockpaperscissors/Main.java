@@ -104,7 +104,8 @@ public class Main {
             do
             {
                 scanner.reset();
-                playerOneSelection = scanner.nextLine().charAt(0);
+                String temp2 = scanner.next();
+                playerOneSelection = temp2.charAt(0);
             } while (playerOneSelection != 'R' && playerOneSelection != 'P' && playerOneSelection != 'S');
 
 
@@ -180,11 +181,15 @@ public class Main {
         do
         {
             showMenu();
-            input = scanner.nextLine().charAt(0);
+            String temp = scanner.next();
+            input = temp.charAt(0);
+            //System.out.println(input);
+
 
             switch(input)
             {
                 case '1':
+                    //System.out.println(input);
                     playGame(false);
                     break;
                 case '2':
