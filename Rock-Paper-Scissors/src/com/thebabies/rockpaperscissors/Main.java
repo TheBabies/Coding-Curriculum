@@ -1,5 +1,6 @@
 package com.thebabies.rockpaperscissors;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -23,11 +24,16 @@ public class Main {
 
     private static int whichPlayerWins(char playerOneWeapon, char playerTwoWeapon)
     {
-        if (playerOneWeapon == 'R' && playerTwoWeapon == 'S')
+        if (playerOneWeapon == playerTwoWeapon)
+            return 3;
+        else if (playerOneWeapon == 'R' && playerTwoWeapon == 'S')
             return 1;
         else if (playerOneWeapon == 'P' && playerTwoWeapon == 'R')
             return 1;
-        else if 
+        else if (playerOneWeapon == 'S' && playerTwoWeapon == 'P')
+            return 1;
+
+        return 2;
     }
 
     private static void clearScreen()
@@ -36,6 +42,28 @@ public class Main {
         {
             System.out.println();
         }
+    }
+
+    private static Character getRandomWeapon()
+    {
+        Random random = new Random();
+        int r = random.nextInt(3);
+        if (r == 0)
+            return 'R';
+        else if (r == 1)
+            return 'P';
+        else
+            return 'S';
+    }
+
+    private static String getWeaponName(Character weaponCode)
+    {
+        if (weaponCode == 'R')
+            return "Rock";
+        else if (weaponCode == 'P')
+            return "Paper";
+        else
+            return "Scissors";
     }
 
     private static void playGame(boolean twoPlayer)
@@ -55,21 +83,95 @@ public class Main {
         }
 
         System.out.println("How many rounds would you like to play?");
-        System.out.print("You must enter an odd number: ");
-        int numberOfRounds;
+        int numberOfRounds = scanner.nextInt();
 
-        // Keep taking user input until an odd number is entered. This is so that there is always an overall winner.
-        do
-        {
-            numberOfRounds = scanner.nextInt();
-        }
-        while (numberOfRounds % 2 == 0);
+        Character playerOneSelection;
+        Character playerTwoSelection;
+        int playerOneScore = 0;
+        int playerTwoScore = 0;
 
         for(int i = 1; i <=numberOfRounds; i++)
         {
             clearScreen();
+            System.out.println("Round " + i);
+            System.out.println();
+
+            if (twoPlayer)
+                System.out.println(playerTwoName + ", please look away from the screen!");
+
+            System.out.println(playerOneName + ", please make your selection.");
             showOptions();
+            do
+            {
+                scanner.reset();
+                playerOneSelection = scanner.nextLine().charAt(0);
+            } while (playerOneSelection != 'R' && playerOneSelection != 'P' && playerOneSelection != 'S');
+
+
+            if (twoPlayer)
+            {
+                clearScreen();
+                System.out.println(playerOneName + ", please look away from the screen!");
+                System.out.println(playerTwoName + ", please make your selection.");
+                do
+                {
+                    playerTwoSelection = scanner.nextLine().charAt(0);
+                } while (playerTwoSelection != 'R' && playerTwoSelection != 'P' && playerTwoSelection != 'S');
+            }
+            else
+            {
+                playerTwoSelection = getRandomWeapon();
+            }
+
+            clearScreen();
+            int result = whichPlayerWins(playerOneSelection, playerTwoSelection);
+            System.out.println(playerOneName + " played " + getWeaponName(playerOneSelection));
+            System.out.println(playerTwoName + " played " + getWeaponName(playerTwoSelection));
+            System.out.println();
+            if (result == 1)
+            {
+                playerOneScore++;
+                System.out.println(playerOneName + " wins! Congratulations!");
+            }
+            else if (result == 2)
+            {
+                playerTwoScore++;
+                System.out.println(playerTwoName + " wins! Congratuations!");
+            }
+            else
+            {
+                System.out.println("Tiebreak! Nobody wins this round");
+            }
+
+            System.out.println("Current Scores");
+            System.out.println(playerOneName + ":\t" + playerOneScore);
+            System.out.println(playerTwoName + ":\t" + playerTwoScore);
+            if (i != numberOfRounds)
+            {
+                System.out.println("Press enter to play the next round");
+                scanner.nextLine();
+            }
         }
+
+        clearScreen();
+        System.out.println("Final results!");
+        if (playerOneScore > playerTwoScore)
+        {
+            System.out.println(playerOneName + " wins with " + playerOneScore + " points!");
+            System.out.println(playerTwoName + " had " + playerTwoScore + " points.");
+        }
+        else if (playerOneScore < playerTwoScore)
+        {
+            System.out.println(playerTwoName + " wins with " + playerTwoScore + " points!");
+            System.out.println(playerOneName + " had " + playerOneScore + " points.");
+        }
+        else
+        {
+            System.out.println("You tied with " + playerOneScore + " points!");
+        }
+        System.out.println();
+        System.out.println("Press enter to go back to the main menu...");
+        scanner.nextLine();
     }
 
     public static void main(String[] args) {
