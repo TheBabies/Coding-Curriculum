@@ -48,24 +48,84 @@
     <h2>Objects</h2>
       <p>
         We talked about how we make classes to build up new objects from them. For example if we hae a class "Dog", that means we have a Dog concept in the programme, and we can make actual dogs
-        from that concept, meaning making dog <em>objects</em>.for example assume that we have
+        from that concept, meaning making dog <em>objects</em>. in order to make a new dog object and work with it, you can do it in your Main class, in main method. here is the time to explain what
+        main method does. <br> the method main is a function inside your Main class and is where your programme starts running. each programme must have one and only one main method as it should know
+        where to start executing your statements! <br> look at the code below:
+        <pre>
+          <code class="language-java">
+            public class Main
+            {
+              public static void main(String[] args)
+              {
+                Dog dog1 = new Dog();
+
+                dog1.name = "Chico";
+                dog1.breed = "German Shepherd";
+                dog1.age = 12;
+
+                dog1.bark();
+                dog1.play();
+              }
+            }
+          </code>
+        </pre>
+        <br> in the code above, we build up an object named dog1, in the first line of the main class. we give the name "Chico" to the new dog, breed "German Shepherd" and age. If you run the code
+        you can see that it shows the barking and playing messages in the console!<br>
+        <ul>
+          <li>Keep in mind that you have to put the Dog class in a Seperate file. In Intellij, simply right click on the src folder in the side bar and make a new java class named Dog.</li>
+        </ul>
+        you can make multiple objects from one class as well. like this:
+        <pre>
+          <code class="language-java">
+            public static void main(String[] args)
+            {
+              Dog dog2 = new Dog();
+              Dog dog3 = new Dog();
+
+              dog2.name = "Brownie";
+              dog3.name = "Diamond";
+            }
+          </code>
+        </pre>
+        <br>There are still so many things you need to learn about so stay with us!... :P
       </p>
   </div>
   <div class="well well-sm">
     <h2>public? private?! What is happening!</h2>
+    <p>
+      You probably have noticed the keyword "public" before many of the given attributes of the Dog class and the class name itself. This concept shows the <em>level of access</em> in other classes.
+      For example, you have seen that we could change the name of the dog1 object in the class Main. meaning that we have access to that attribute in the Main class. however, if before the attribute
+      instead of "public" keyword we use "private", we could only work with it and change it inside the class Dog and we could not change anything in any other class such as main. The usage of this is
+      to make sure not everyone can change your code in some cases that you want to be the only person accessing that class, and also in a concept named inheritence which you can learn about through
+      searching the links in our exercises!
+    </p>
   </div>
   <div class="well well-sm">
     <h2>Constructor Constructs!</h2>
+    <p>
+      if you look at the part of code that we made a new object of the dog, it might look a little bit odd to you. the point here is that
+    </p>
   </div>
   <div class="well well-sm">
     <h2>Exercises for Today</h2>
     <h4>Warm up!</h4>
     <p>
-
+      Classes and the whole object oriented concept is a little bit hard to get in the first place, therefore you have to do some research on the concepts that you have found a little vague by now (
+      and by reasearch I basically mean google! google is the best friend of every single programmer!) So that you will get more familiar and used to the OOP concepts!<br> Try to do the exercises below as well!
+      <ol>
+        <li>Make a class named Fruit. the fruit class should have attributes such as colour and taste. be creative! add your own attributes to it as well!</li>
+        <li>Create new fruits. choose the reference variables name as your fruit's name so it would make sense.</li>
+        <li>try to add 3 different constructors in your Fruit class and call them when making new objects.</li>
+      </ol>
     </p>
     <h4>Go further in action!</h4>
     <p>
-
+      If you have done all well by now, here are some resources you can go and learn about harder concepts in the object oriented programming.
+      <ul>
+        <li>Inheritence is a really important concept in object oriented programming.<a href="http://www.tutorialspoint.com/java/java_inheritance.htm">this link</a>should help you out with it.</li>
+        <li>Encapsulation is a concept related to Inheritence. find it <a href="http://www.tutorialspoint.com/java/java_encapsulation.htm">here</a> and learn about it!</li>
+      </ul>
+      There are more stuff on the internet that you can learn from them. don't hesitate! go for it!
     </p>
   </div>
 </div>
