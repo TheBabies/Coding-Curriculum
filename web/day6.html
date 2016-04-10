@@ -103,7 +103,36 @@
   <div class="well well-sm">
     <h2>Constructor Constructs!</h2>
     <p>
-      if you look at the part of code that we made a new object of the dog, it might look a little bit odd to you. the point here is that
+      if you look at the part of code that we made a new object of the dog, it might look a little bit odd to you. the point here is that when you are making a new object, you make 2 new things in the
+      memory. one is called the <em>reference variable</em>. this is the name you choose for your object, "Dog dog1",which means dog1 is a variable of type Dog. the second part is the actual object that
+      you build with the part "new Dog();" this part makes an actual object in your memory, and your reference variable meaning "dog1" points to it's address in the memory. so a reference variable of type Dog
+      points to an object of type Dog in the memory.<br> If you look a little bit further, you can see the part "Dog()" looks like a method. You're right, it actually is a method. it's a method that builds up
+      a new object of type Dog. this object is called the <em>constructor</em>.<br>
+      <pre>
+        <code class="language-java">
+          public class Dog
+          {
+            public String name;
+            public String breed;
+            public int age;
+
+            public Dog(String name, String breed, int age)
+            {
+                this.name = name;
+                this.breed = breed;
+                this.age = age;
+            }
+          }
+
+          public
+        </code>
+      </pre>
+      <br>
+      The constructor builds the object dog for you, and sets the initial values of name, breed and age based on what you give to it as the parameters of the constructor method!<br>
+      Every single class has a constructor. even if you don't make any constructor for it, java itself makes an empty method with no parameters and when making new objects of that class, calls that method. You can
+      also have multiple constructors. but remember, if you made a constructor that has a parameter, such as above, you cannot call a constructor with no parameter unless you make one in your class. as java sees that you
+      have made a constructor in your code and won't bother making a new one for you! So keep that in mind! :P <br> Note that the keyword "this" is just to show you are pointing to the variable of your object, the method
+      that you are working with, meaning this.name is the name of your object, while name is just the variable which is given as the parameter of the constructor and does not exist in your object! <br>
     </p>
   </div>
   <div class="well well-sm">
