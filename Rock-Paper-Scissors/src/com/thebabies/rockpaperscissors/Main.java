@@ -185,13 +185,10 @@ public class Main {
             showMenu();
             String inputString = scanner.next();
             input = inputString.charAt(0);
-            //System.out.println(input);
-
 
             switch(input)
             {
                 case '1':
-                    //System.out.println(input);
                     playGame(false);
                     break;
                 case '2':
