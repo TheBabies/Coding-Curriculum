@@ -75,6 +75,9 @@
       <img src="img/Day7_01.jpg" style="width:577px; height: 167px;">
     </p>
     <p>
+      Call your funtion showMenu, to make it easier to follow any sample code given in this tutorial.
+    </p>
+    <p>
       <div class="panel-group" id="Accordion_Day7_01" role="tablist">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="Accordion_Day7_01_1">
@@ -96,6 +99,122 @@
                       System.out.println("2) Play against a friend");
                       System.out.println("x) Exit the game");
                   }
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+
+  <div class="well well-sm">
+    <h4>Weapon of Choice?</h4>
+    <p>
+      That wasn't too painful, eh? Now let's do the same thing again, but this time offer the user three options:
+      <ul>
+        <li>Rock</li>
+        <li>Paper</li>
+        <li>Scissors</li>
+      </ul>
+    </p>
+    <p>
+      Again, here's a lovely example of what output you should be aiming for:
+      <img src="img/Day7_02.jpg" style="width: 368.5px; height: 126px;">
+    </p>
+    <p>
+      Call your function showOptions, so that you can follow along with any sample code throughout this tutorial.
+    </p>
+    <p>
+      <div class="panel-group" id="Accordion_Day7_02" role="tablist">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="Accordion_Day7_02_1">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#Accordion_Day7_02" href="#Accordion_Day7_02_Collapse1" aria-expanded="true" aria-controls="Accordion_Day7_02_1">
+                *** SPOILER ALERT *** Code Answer is Inside *** SPOILER ALERT ***
+              </a>
+            </h4>
+          </div>
+          <div id="Accordion_Day7_02_Collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Accordion_Day7_02_1">
+            <div class="panel-body">
+              <pre>
+                <code class="language-java">
+                  private static void showOptions()
+                  {
+                      System.out.println("Please select a weapon");
+                      System.out.println("R) Rock");
+                      System.out.println("P) Paper");
+                      System.out.println("S) Scissors");
+                  }
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+  <div class="well well-sm">
+    <h4>Scissors cuts Paper, Paper covers Rock and, as it always has, Rock crushes Scissors</h4>
+    <p>
+      If you don't get the reference, watch this so that I might have a tougher time judging you...<br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/Kov2G0GouBw" frameborder="0" allowfullscreen></iframe>
+    </p>
+    <p>
+      Now let's program some rules into this system! We're not going into a Sheldon level of detail here, so the three rules you need
+      to implement are the ones in the title:
+      <ul>
+        <li>If scissors are against paper, scissors wins.</li>
+        <li>If paper is against rock, paper wins.</li>
+        <li>If rock is against scissors, rock wins.</li>
+      </ul>
+    </p>
+    <p>
+      Here are some hints:
+      <ul>
+        <li>
+          Your function should return an integer (1 if player one won, 2 if player two won or 3 if the result was a tie).
+        </li>
+        <li>
+          Your function should take in two characters (each of which will be R (rock), P (paper) or S (scissors)). Each of those
+          will have been entered by a player
+        </li>
+        <li>
+          Try focussing only on one player's perspective. If the result wasn't a tie, and player one did not win then player two
+          must have won. This will save you on coding.
+        </li>
+        <li>
+          Call your function whichPlayerWins.
+        </li>
+      </ul>
+    </p>
+    <p>
+      <div class="panel-group" id="Accordion_Day7_03" role="tablist">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="Accordion_Day7_03_1">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#Accordion_Day7_03" href="#Accordion_Day7_03_Collapse1" aria-expanded="true" aria-controls="Accordion_Day7_03_1">
+                *** SPOILER ALERT *** Code Answer is Inside *** SPOILER ALERT ***
+              </a>
+            </h4>
+          </div>
+          <div id="Accordion_Day7_03_Collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Accordion_Day7_03_1">
+            <div class="panel-body">
+              <pre>
+                <code class="language-java">
+                  private static int whichPlayerWins(char playerOneWeapon, char playerTwoWeapon)
+                   {
+                       if (playerOneWeapon == playerTwoWeapon)
+                           return 3;
+                       else if (playerOneWeapon == 'R' && playerTwoWeapon == 'S')
+                           return 1;
+                       else if (playerOneWeapon == 'P' && playerTwoWeapon == 'R')
+                           return 1;
+                       else if (playerOneWeapon == 'S' && playerTwoWeapon == 'P')
+                           return 1;
+
+                       return 2;
+                   }
                 </code>
               </pre>
             </div>
