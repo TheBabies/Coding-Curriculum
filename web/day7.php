@@ -223,7 +223,55 @@
       </div>
     </p>
   </div>
-
+  <div class="well well-sm">
+    <h2>No cheating!</h2>
+    <p>
+      in order to make sure that the opponent is not looking at the screen while you are playing, we need to build a clearScreen function! so that it clears the other opponent's
+      choice! HINT: you can do it by simply printing out empty lines...
+      <div id="Accordion_Day7_03_Collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Accordion_Day7_03_1">
+        <div class="panel-body">
+          <pre>
+            <code class="language-java">
+              private static void clearScreen()
+              {
+                  for (int i = 0; i < 50; i++)
+                  {
+                      System.out.println();
+                  }
+              }
+            </code>
+          </pre>
+        </div>
+      </div>
+    </p>
+  </div>
+  <div class="well well-sm">
+    <h2>Computer Chooses...!</h2>
+    <p>
+      The times that you want to play against the computer you need to get it to make a choice, just like a person! but you need to tell it how to randomly choose a move, this is done
+      by one of the java library classes named Random, which holds a method named "nextInt" that returns an Int value from 0 to the value that you give to the function! It's pretty interesting,
+      you can search for more uses of Random class on google!
+      <div id="Accordion_Day7_03_Collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Accordion_Day7_03_1">
+        <div class="panel-body">
+          <pre>
+            <code class="language-java">
+              private static Character getRandomWeapon()
+              {
+                  Random random = new Random();
+                  int r = random.nextInt(3);
+                  if (r == 0)
+                      return 'R';
+                  else if (r == 1)
+                      return 'P';
+                  else
+                      return 'S';
+              }
+            </code>
+          </pre>
+        </div>
+      </div>
+    </p>
+  </div>
   <div class="well well-sm">
     <h4>Full Answers</h4>
     <p>
