@@ -223,4 +223,34 @@
       </div>
     </p>
   </div>
+
+  <div class="well well-sm">
+    <h4>Full Answers</h4>
+    <p>
+      Well here they are! Just in case you've become confused at any point throughout this tutorial,
+      the full source code to the whole program is here.
+    </p>
+    <p>
+      <div class="panel-group" id="Accordion_Day7_99" role="tablist">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="Accordion_Day7_99_1">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#Accordion_Day7_99" href="#Accordion_Day7_99_Collapse1" aria-expanded="true" aria-controls="Accordion_Day7_99_1">
+                *** SPOILER ALERT *** Code Answer is Inside *** SPOILER ALERT ***
+              </a>
+            </h4>
+          </div>
+          <div id="Accordion_Day7_99_Collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Accordion_Day7_99_1">
+            <div class="panel-body">
+              <pre>
+                <code class="language-java">
+<?=file_get_contents('../Rock-Paper-Scissors/src/com/thebabies/rockpaperscissors/Main.java');?>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
 </div>
